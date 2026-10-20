@@ -1,0 +1,16 @@
+export { WorkWaveCase } from "./ui/WorkWaveCase"
+export { WorkWaveHero } from "./ui/sections/WorkWaveHero"
+export { WorkWaveAboutCompany } from "./ui/sections/WorkWaveAboutCompany"
+export { WorkWaveTask } from "./ui/sections/WorkWaveTask"
+export { WorkWaveEmployer } from "./ui/sections/WorkWaveEmployer"
+export { WorkWaveProblem } from "./ui/sections/WorkWaveProblem"
+export { WorkWaveRoles } from "./ui/sections/WorkWaveRoles"
+export { WorkWaveGeosearch } from "./ui/sections/WorkWaveGeosearch"
+export { WorkWaveIneternship } from "./ui/sections/WorkWaveInternship"
+export { WorkWaveStates } from "./ui/sections/WorkWaveStates"
+export { WorkEdgeCases } from "./ui/sections/WorkWaveEdgeCases"
+export { WorkWaveHandoff } from "./ui/sections/WorkWaveHandoff"
+export { WorkWaveResult } from "./ui/sections/WorkWaveResult"
+export { WorkWaveNextCase } from "./ui/sections/WorkWaveNextCase"
+
+
