@@ -5,7 +5,7 @@ import {
   useState,
 } from "react";
 
-import LineSidebar from "@/components/LineSidebar";
+import LineSidebar from "@/components/ui/LineSidebar";
 
 interface CaseNavigationItem {
   id: string;
