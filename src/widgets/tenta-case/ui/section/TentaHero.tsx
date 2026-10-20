@@ -57,7 +57,7 @@ export function TentaHero() {
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 items-stretch gap-4 lg:gap-x-6 px-3 lg:px-0">
-                    <div className="p-6 [@media(min-height:850px)]:lg:p-8 border-[1px] h-full border-[#C8CEFC] rounded-3xl flex flex-col justify-between">
+                    <div className="p-6 [@media(min-height:850px)]:lg:p-8 border-[1px] h-full border-[#C8CEFC] rounded-3xl flex flex-col justify-start">
                         <p className="text-[20px] [@media(min-height:850px)]:lg:text-[24px] font-semibold leading-[28px] text-[#212967]">
                             Моя роль
                         </p>
@@ -65,7 +65,7 @@ export function TentaHero() {
                             UX/UI-дизайнер
                         </p>
                     </div>
-                    <div className="p-6 [@media(min-height:850px)]:lg:p-8 border-[1px] border-[#C8CEFC] rounded-3xl flex flex-col justify-between">
+                    <div className="p-6 [@media(min-height:850px)]:lg:p-8 border-[1px] border-[#C8CEFC] rounded-3xl flex flex-col justify-start">
                         <p className="text-[20px] [@media(min-height:850px)]:lg:text-[24px] font-semibold leading-[28px] text-[#212967]">
                             Ограничение
                         </p>
@@ -73,7 +73,7 @@ export function TentaHero() {
                             Параллельная разработка без прямого контакта с разработчиками
                         </p>
                     </div>
-                    <div className="p-6 [@media(min-height:850px)]:lg:p-8 border-[1px] border-[#C8CEFC] rounded-3xl flex flex-col justify-between">
+                    <div className="p-6 [@media(min-height:850px)]:lg:p-8 border-[1px] border-[#C8CEFC] rounded-3xl flex flex-col justify-start">
                         <p className="text-[20px] [@media(min-height:850px)]:lg:text-[24px] font-semibold leading-[28px] text-[#212967]">
                             Статус
                         </p>
