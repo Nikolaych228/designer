@@ -1,17 +1,8 @@
 import type { ReactNode } from "react";
+import type { ProjectSlug } from "@/entities/project";
+import { Button } from "@/shared/ui/button";
 
-import type {
-  ProjectSlug,
-} from "@/entities/project";
-
-import {
-  Button,
-} from "@/shared/ui/button";
-
-type ArrowPosition =
-  | "left"
-  | "right"
-  | "both";
+type ArrowPosition = "left" | "right" | "both";
 
 interface ProjectNavigationProps {
   slug: ProjectSlug;
@@ -28,7 +19,8 @@ export function ProjectNavigation({
 }: ProjectNavigationProps) {
   return (
     <Button
-      href={`/projects/${slug}`}
+      // Убрали /designer, добавили слеш в конце
+      href={`/projects/${slug}/`} 
       arrow={arrow}
       className={className}
     >
