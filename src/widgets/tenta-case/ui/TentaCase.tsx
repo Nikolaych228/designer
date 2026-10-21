@@ -17,7 +17,6 @@ import { TentaDecision } from "./section/TentaDecision";
 import { TentaTerminal } from "./section/TentaTerminal";
 import { TentaResult } from "./section/TentaResult";
 import { TentaOutsideInterface } from "./section/TentaOutsideInterface";
-import { TentaNextCase } from "./section/TentaNextCase";
 import { TentaUnpleasant } from "./section/TentaUnpleasant";
 import { Header } from "@/widgets/header";
 
