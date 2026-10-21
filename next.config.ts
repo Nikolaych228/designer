@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
+// Умная настройка: префикс только для продакшена (GitHub)
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   output: 'export',
-  // Локально basePath = '', на GitHub = '/designer-portfolio'
-  basePath: isProd ? '/designer-portfolio' : '',
-  assetPrefix: isProd ? '/designer-portfolio/' : '',
+  
+  // ВАЖНО: здесь должно быть имя вашего репозитория (designer)
+  basePath: isProd ? '/designer' : '',
+  assetPrefix: isProd ? '/designer/' : '',
+  
   images: {
     unoptimized: true,
   },

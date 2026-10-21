@@ -73,13 +73,6 @@ export default async function ProjectPage({
     case "tenta":
       return <TentaCase />;
 
-    /*
-    Потом просто добавим:
-
-    case "excursions":
-      return <ExcursionsCase />;
-    */
-
     default:
       notFound();
   }
