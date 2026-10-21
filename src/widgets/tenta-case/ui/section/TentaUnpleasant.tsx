@@ -18,7 +18,7 @@ export function TentaUnpleasant({
       className={className}
       {...props}
     >
-    {/* 👈 Убрали bg-[url(...)] из классов и перенесли в style */}
+
     <div 
       className="relative bg-center bg-no-repeat bg-[length:100%_auto] w-full"
       style={{ backgroundImage: `url(${imgPath("/icons/tenta-unpleasant.svg")})` }}
