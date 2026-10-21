@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  output: 'export', // Включает статический экспорт
-  basePath: '/designer-portfolio', // Например, '/designer-portfolio'
-  assetPrefix: '/designer-portfolio', // Должен совпадать с basePath
+  output: 'export',
+  // Локально basePath = '', на GitHub = '/designer-portfolio'
+  basePath: isProd ? '/designer-portfolio' : '',
+  assetPrefix: isProd ? '/designer-portfolio/' : '',
   images: {
-    unoptimized: true, // Отключает оптимизацию изображений, так как GitHub Pages не поддерживает серверные функции
+    unoptimized: true,
   },
 };
 
