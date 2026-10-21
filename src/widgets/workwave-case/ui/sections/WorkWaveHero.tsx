@@ -59,7 +59,7 @@ export function WorkWaveHero () {
                             6 месяцев
                         </p>
                     </div>
-                    <div className="p-4 [@media(min-height:850px)]:lg:p-8 bg-[#fff] rounded-3xl border border-gray-100 lg:border-transparent flex flex-col justify-between">
+                    <div className="p-8 border-[1px] border-[#C8CEFC] rounded-3xl">
                         <p className="text-[18px] [@media(min-height:850px)]:lg:text-[24px] text-[#212967] leading-[24px] [@media(min-height:850px)]:lg:leading-[28px] font-semibold">
                             MVP вышел в RuStore
                         </p>
