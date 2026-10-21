@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -35,7 +36,7 @@ export function WorkWaveRoles({
                     </p>
                 </div>
                 <Image
-                    src="/images/workwave/workwave-roles1.png"
+                    src={imgPath("/images/workwave/workwave-roles1.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     width={658}
                     height={668}
@@ -49,7 +50,7 @@ export function WorkWaveRoles({
                     </p>
                 </div>
                 <Image
-                    src="/images/workwave/workwave-roles2.png"
+                    src={imgPath("/images/workwave/workwave-roles2.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     width={658}
                     height={668}

@@ -1,6 +1,7 @@
 import Aurora from "@/components/ui/mesh-gradient-background";
 import { Button } from "@/shared/ui/button";
 import Image from "next/image";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 export function FinalCtaCase() {
     return (
@@ -62,7 +63,7 @@ export function FinalCtaCase() {
                         "
                     >
                         <Image
-                            src="/icons/mail.svg"
+                            src={imgPath("/icons/mail.svg")} // 👈 ИСПРАВЛЕНО
                             alt=""
                             width={24}
                             height={24}

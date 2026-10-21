@@ -2,8 +2,7 @@
 import Aurora from "@/components/ui/mesh-gradient-background";
 import { Button, ButtonWhite } from "@/shared/ui/button";
 import Image from "next/image";
-
-
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 export function Hero() {
   return (
@@ -19,28 +18,28 @@ export function Hero() {
         </div>
       <div className="flex gap-x-3 z-10 mb-6">
         <Image
-            src="/icons/star.svg"
+            src={imgPath("/icons/star.svg")} // 👈 ИСПРАВЛЕНО
             alt=""
             width={8}
             height={8}
         />
         <p className="text-gray-400 text-[12px] leading-[16px]">5 лет коммерческого опыта</p>
         <Image
-            src="/icons/star.svg"
+            src={imgPath("/icons/star.svg")} // 👈 ИСПРАВЛЕНО
             alt=""
             width={8}
             height={8}
         />
         <p className="text-gray-400 text-[12px] leading-[16px]">B2B / B2C</p>
         <Image
-            src="/icons/star.svg"
+            src={imgPath("/icons/star.svg")} // 👈 ИСПРАВЛЕНО
             alt=""
             width={8}
             height={8}
         />
         <p className="text-gray-400 text-[12px] leading-[16px]">Web & Mobile</p>
         <Image
-            src="/icons/star.svg"
+            src={imgPath("/icons/star.svg")} // 👈 ИСПРАВЛЕНО
             alt=""
             width={8}
             height={8}
@@ -51,14 +50,18 @@ export function Hero() {
       </p>
       <div className="max-w-[720px] z-10 text-center mt-4">
         <p className="text-[18px] leading-[28px] text-gray-400">
-           Работаю с ролями, данными, состояниями и ограничениями.<br/>Проектирую сценарии, UI-систему и готовлю решение к разработке
+           Работаю с ролями, данными, состояниями и ограничениями.<br/>Проектирую сценарии, UI-систему и готовлю решение к разработке
         </p>
       </div>
       <div className="mt-6 z-10 flex gap-x-3">
           <Button onClick={() => window.dispatchEvent(new Event("scrollToProjects"))}>
               Перейти к кейсам
           </Button>
-          <ButtonWhite target="_blank" href="/pdf/Rezyume.pdf" arrowPrime="right">
+          <ButtonWhite 
+            target="_blank" 
+            href={imgPath("/pdf/Rezyume.pdf")} // 👈 ИСПРАВЛЕНО (добавили imgPath)
+            arrowPrime="right"
+          >
               Открыть CV
           </ButtonWhite>
       </div>

@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { Button } from "@/shared/ui/button";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +17,7 @@ const PROCESS_ITEMS = [
     number: "01",
     title: "Разобраться в задаче",
     description:
-      "Собираю вводные, ограничения и недостающие данные. Формулирую, какую проблему нужно решить",
+      "Собираю вводные, ограничения и недостающие данные. Формулирую, какую проблему нужно решить",
     image: "/images/process/Case1.png",
     side: "left",
   },
@@ -24,7 +25,7 @@ const PROCESS_ITEMS = [
     number: "02",
     title: "Достроить логику",
     description:
-      "Определяю роли, сущности, сценарии, состояния и зависимости",
+      "Определяю роли, сущности, сценарии, состояния и зависимости",
     image: "/images/process/Case2.png",
     side: "right",
   },
@@ -32,15 +33,15 @@ const PROCESS_ITEMS = [
     number: "03",
     title: "Проверить решение интерфейсом",
     description:
-      "Сравниваю варианты на wireframes и прототипах. После этого фиксирую UI",
+      "Сравниваю варианты на wireframes и прототипах. После этого фиксирую UI",
     image: "/images/process/Case3.png",
     side: "left",
   },
   {
     number: "04",
-    title: "Подготовить к разработке",
+    title: "Подготовить к разработке",
     description:
-      "Собираю компоненты и состояния, описываю поведение и сопровождаю handoff",
+      "Собираю компоненты и состояния, описываю поведение и сопровождаю handoff",
     image: "/images/process/Case4.png",
     side: "right",
   },
@@ -266,7 +267,7 @@ export function Process() {
             text-gray-400
           "
         >
-          На коммерческих проектах всегда была единственным дизайнером продукта и отвечала за весь UX/UI-контур
+          На коммерческих проектах всегда была единственным дизайнером продукта и отвечала за весь UX/UI-контур
         </p>
       </div>
 
@@ -509,7 +510,7 @@ function ProcessCard({
         "
       >
         <Image
-          src={item.image}
+          src={imgPath(item.image)} // 👈 ИСПРАВЛЕНО
           alt=""
           width={518}
           height={354}

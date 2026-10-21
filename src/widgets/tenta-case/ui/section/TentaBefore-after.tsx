@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -120,7 +121,7 @@ function ImageSlider() {
         </p>
       </div>
       <Image
-        src="/images/tenta/tenta-beforeAfter1.png"
+        src={imgPath("/images/tenta/tenta-beforeAfter1.png")} // 👈 ИСПРАВЛЕНО
         alt="До"
         width={626}
         height={0}
@@ -129,7 +130,7 @@ function ImageSlider() {
       
       {/* Фото "После" (накладывается сверху и обрезается по ширине) */}
       <Image
-        src="/images/tenta/tenta-beforeAfter2.png"
+        src={imgPath("/images/tenta/tenta-beforeAfter2.png")} // 👈 ИСПРАВЛЕНО
         alt="После"
         width={626}
         height={0}
@@ -220,7 +221,7 @@ export function TentaBeforeAfter({
         
         {/* Нижняя картинка: обязательно добавляем w-full h-auto, чтобы она не вылезала */}
         <Image
-          src="/images/tenta/tenta-decision.png"
+          src={imgPath("/images/tenta/tenta-decision.png")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={1920}
           height={0}

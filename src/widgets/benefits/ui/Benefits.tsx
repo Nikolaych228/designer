@@ -10,6 +10,7 @@ import Image from "next/image";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +47,7 @@ export function Benefits() {
                 [@media(min-height:850px)]:lg:px-[284px]">
       <div className="max-w-[720px]">
           <p className="text-[48px] text-center font-semibold leading-[58px] text-gray-900 ">
-            Работаю не с экранами, а со связями между ними
+            Работаю не с экранами, а со связями между ними
           </p>
         </div>
       <div
@@ -653,7 +654,7 @@ function LogicBenefitCard() {
             }}
           >
             <Image
-              src="/images/benefits/Group 6820.png"
+              src={imgPath("/images/benefits/Group 6820.png")} // 👈 ИСПРАВЛЕНО
               alt="Initial brief"
               width={490}
               height={140}
@@ -684,7 +685,7 @@ function LogicBenefitCard() {
             }}
           >
             <Image
-              src="/images/benefits/Group 6822.png"
+              src={imgPath("/images/benefits/Group 6822.png")} // 👈 ИСПРАВЛЕНО
               alt="Product logic"
               width={584}
               height={158}
@@ -715,7 +716,7 @@ function LogicBenefitCard() {
             }}
           >
             <Image
-              src="/images/benefits/Group 6823.png"
+              src={imgPath("/images/benefits/Group 6823.png")} // 👈 ИСПРАВЛЕНО
               alt="Core flows"
               width={431}
               height={171}
@@ -746,7 +747,7 @@ function LogicBenefitCard() {
             }}
           >
             <Image
-              src="/images/benefits/Group 6824.png"
+              src={imgPath("/images/benefits/Group 6824.png")} // 👈 ИСПРАВЛЕНО
               alt="Edge cases"
               width={431}
               height={171}
@@ -1428,7 +1429,7 @@ function OwnershipBenefitCard() {
             {/* document body */}
 
             <Image
-              src={`${OWNERSHIP}/Rectangle 452.svg`}
+              src={imgPath(`${OWNERSHIP}/Rectangle 452.svg`)} // 👈 ИСПРАВЛЕНО
               alt=""
               width={179}
               height={221}
@@ -1606,7 +1607,7 @@ function OwnershipBenefitCard() {
             }}
           >
             <Image
-              src={`${OWNERSHIP}/Vector.svg`}
+              src={imgPath(`${OWNERSHIP}/Vector.svg`)} // 👈 ИСПРАВЛЕНО
               alt=""
               width={83}
               height={84}
@@ -2078,7 +2079,7 @@ function UpdateBenefitCard() {
             "
           >
             <Image
-              src={`${UPDATE}/Group 6825.svg`}
+              src={imgPath(`${UPDATE}/Group 6825.svg`)} // 👈 ИСПРАВЛЕНО
               alt=""
               width={122}
               height={122}
@@ -2094,7 +2095,7 @@ function UpdateBenefitCard() {
             />
 
             <Image
-              src={`${UPDATE}/Rectangle 453.svg`}
+              src={imgPath(`${UPDATE}/Rectangle 453.svg`)} // 👈 ИСПРАВЛЕНО
               alt=""
               width={51}
               height={51}
@@ -2128,7 +2129,7 @@ function UpdateBenefitCard() {
               "
             >
               <Image
-                src={`${UPDATE}/refresh-circular.svg`}
+                src={imgPath(`${UPDATE}/refresh-circular.svg`)} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={28}
                 height={28}
@@ -2335,7 +2336,7 @@ function DocumentLine({
       }}
     >
       <Image
-        src={`${OWNERSHIP}/${file}`}
+        src={imgPath(`${OWNERSHIP}/${file}`)} // 👈 ИСПРАВЛЕНО
         alt=""
         width={width}
         height={5}

@@ -1,12 +1,11 @@
 import Image from "next/image";
-
-
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 export function WorkWaveHero () {
     return (
         <section>
             <Image
-                src="/images/workwave/workwave-hero.png"
+                src={imgPath("/images/workwave/workwave-hero.png")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={1920}
                 height={840}
@@ -17,7 +16,7 @@ export function WorkWaveHero () {
                         B2C + B2B
                     </p>
                     <Image
-                        src="/icons/starPrimary.svg"
+                        src={imgPath("/icons/starPrimary.svg")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={8}
                         height={8}
@@ -26,7 +25,7 @@ export function WorkWaveHero () {
                         Marketplace
                     </p>
                     <Image
-                        src="/icons/starPrimary.svg"
+                        src={imgPath("/icons/starPrimary.svg")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={8}
                         height={8}
@@ -37,7 +36,7 @@ export function WorkWaveHero () {
                 </div>
                 <div className="grid grid-cols-2 items-center my-10 gap-x-10 px-3">
                     <p className="[@media(min-height:850px)]:lg:text-[40px] text-[32px] text-[#131927] font-semibold leading-[48px]">
-                       Из десяти ключевых экранов собрала MVP для двух ролей 
+                       Из десяти ключевых экранов собрала MVP для двух ролей 
                     </p>
                     <p className="[@media(min-height:850px)]:lg:text-[18px] text-[16px] text-gray-500 leading-[28px]">
                         В исходных требованиях не хватало состояний и промежуточных сценариев. Достроила UX соискателя и работодателя примерно до 60 экранов и состояний. MVP дошёл до RuStore.

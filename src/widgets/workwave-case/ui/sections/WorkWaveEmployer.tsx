@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -57,7 +58,7 @@ export function WorkWaveEmployer({
         </div>
         <div className="w-full flex justify-center items-center">
             <Image
-                src="/images/workwave/workwave-team.png"
+                src={imgPath("/images/workwave/workwave-team.png")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={528}
                 height={528}

@@ -142,7 +142,7 @@ export function TentaCase() {
           animateIn="animate__slideInUp"
           animateOnce
         >
-          <TentaDecision id="decision"/>  
+          <TentaDecision id="decision"/>   
         </AnimationOnScroll>
 
         <AnimationOnScroll

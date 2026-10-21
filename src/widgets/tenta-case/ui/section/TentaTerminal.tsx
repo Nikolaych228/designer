@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -229,7 +230,7 @@ export function TentaTerminal({
                 </div>
                 
                   <Image
-                      src="/images/tenta/tenta-terminal.png"
+                      src={imgPath("/images/tenta/tenta-terminal.png")} // 👈 ИСПРАВЛЕНО
                       alt=""
                       width={658}
                       height={0}
@@ -239,10 +240,10 @@ export function TentaTerminal({
             </div>   
         </div>
         <div className="px-3 lg:px-0">
-            {/* Вызов слайдера */}
+            {/* Вызов слайдера с исправленными путями */}
             <BeforeAfterSlider
-              imageBefore="/images/tenta/tenta-terminal1.png"
-              imageAfter="/images/tenta/tenta-terminal2.png"
+              imageBefore={imgPath("/images/tenta/tenta-terminal1.png")} // 👈 ИСПРАВЛЕНО
+              imageAfter={imgPath("/images/tenta/tenta-terminal2.png")} // 👈 ИСПРАВЛЕНО
               className="mt-10"
             />
         </div>

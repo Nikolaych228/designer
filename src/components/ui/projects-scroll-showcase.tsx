@@ -5,7 +5,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { cn } from "@/lib/utils";
+import { cn, imgPath } from "@/lib/utils"; // 👈 Добавили imgPath
 import { ProjectNavigation } from "@/features/project-navigation";
 
 if (typeof window !== "undefined") {
@@ -172,7 +172,7 @@ function ProjectOneMockup() {
             data-phone
             data-piece
             unoptimized
-            src={`${PROJECT_1}/phone1.png`}
+            src={imgPath(`${PROJECT_1}/phone1.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={672}
             height={868}
@@ -184,7 +184,7 @@ function ProjectOneMockup() {
             data-floating-piece
             data-piece
             unoptimized
-            src={`${PROJECT_1}/topBlock.png`}
+            src={imgPath(`${PROJECT_1}/topBlock.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={310}
             height={159}
@@ -196,7 +196,7 @@ function ProjectOneMockup() {
             data-floating-piece
             data-piece
             unoptimized
-            src={`${PROJECT_1}/botBlock.png`}
+            src={imgPath(`${PROJECT_1}/botBlock.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={326}
             height={355}
@@ -229,7 +229,7 @@ function ProjectTwoMockup() {
             data-phone
             data-piece
             unoptimized
-            src={`${PROJECT_2}/phone2.png`}
+            src={imgPath(`${PROJECT_2}/phone2.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={672}
             height={868}
@@ -240,7 +240,7 @@ function ProjectTwoMockup() {
             data-floating-piece
             data-piece
             unoptimized
-            src={`${PROJECT_2}/top.png`}
+            src={imgPath(`${PROJECT_2}/top.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={389}
             height={203}
@@ -251,7 +251,7 @@ function ProjectTwoMockup() {
             data-floating-piece
             data-piece
             unoptimized
-            src={`${PROJECT_2}/bot3.png`}
+            src={imgPath(`${PROJECT_2}/bot3.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={389}
             height={218}
@@ -262,7 +262,7 @@ function ProjectTwoMockup() {
             data-floating-piece
             data-piece
             unoptimized
-            src={`${PROJECT_2}/bot2.png`}
+            src={imgPath(`${PROJECT_2}/bot2.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={389}
             height={218}
@@ -273,7 +273,7 @@ function ProjectTwoMockup() {
             data-floating-piece
             data-piece
             unoptimized
-            src={`${PROJECT_2}/bot1.png`}
+            src={imgPath(`${PROJECT_2}/bot1.png`)} // 👈 ИСПРАВЛЕНО
             alt=""
             width={389}
             height={218}
@@ -305,7 +305,6 @@ export function ProjectsScrollShowcase({
     const handleScrollToProjects = () => {
       const st = ScrollTrigger.getById("projects-trigger");
       if (st) {
-        // Получаем точную высоту пикселей, где находится наша метка
         const targetY = st.labelToScroll("case1Ready");
         if (targetY !== undefined) {
           window.scrollTo({ top: targetY, behavior: "smooth" });
@@ -393,7 +392,7 @@ export function ProjectsScrollShowcase({
           scrub: 0.8,
           anticipatePin: 1,
           invalidateOnRefresh: true,
-          id: "projects-trigger", // ID для поиска триггера из обработчика события
+          id: "projects-trigger",
         },
       });
 
@@ -415,7 +414,6 @@ export function ProjectsScrollShowcase({
         "-=1.15"
       );
       
-      // МЕТКА: контент 1-го кейса полностью появился
       scrollTl.addLabel("case1Ready");
 
       scrollTl.to({}, { duration: 1.2 });

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -36,7 +37,7 @@ export function TentaAboutCompany({
             </div>
             <div className="px-3 lg:px-0 flex items-center">
                 <Image
-                    src="/images/tenta/tenta-aboutCompany.png"
+                    src={imgPath("/images/tenta/tenta-aboutCompany.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     width={646}
                     height={624}

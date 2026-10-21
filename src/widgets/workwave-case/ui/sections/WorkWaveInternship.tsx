@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -39,7 +40,7 @@ export function WorkWaveIneternship({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-x-5 mt-6 lg:mt-10">
             <div>
                 <Image
-                    src="/images/workwave/workwave-internshipPhone1.png"
+                    src={imgPath("/images/workwave/workwave-internshipPhone1.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     height={700}
                     width={440}
@@ -56,7 +57,7 @@ export function WorkWaveIneternship({
             </div>
             <div>
                 <Image
-                    src="/images/workwave/workwave-internshipPhone2.png"
+                    src={imgPath("/images/workwave/workwave-internshipPhone2.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     height={700}
                     width={440}
@@ -73,7 +74,7 @@ export function WorkWaveIneternship({
             </div>
             <div>
                 <Image
-                    src="/images/workwave/workwave-internshipPhone3.png"
+                    src={imgPath("/images/workwave/workwave-internshipPhone3.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     height={700}
                     width={440}
@@ -92,7 +93,7 @@ export function WorkWaveIneternship({
       </div>
       
       <Image
-        src="/images/workwave/workwave-internshipBg.png"
+        src={imgPath("/images/workwave/workwave-internshipBg.png")} // 👈 ИСПРАВЛЕНО
         alt=""
         width={1920}
         height={0}

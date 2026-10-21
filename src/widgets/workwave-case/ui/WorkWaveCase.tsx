@@ -14,7 +14,6 @@ import { WorkWaveStates } from "./sections/WorkWaveStates";
 import { WorkEdgeCases } from "./sections/WorkWaveEdgeCases";
 import { WorkWaveHandoff } from "./sections/WorkWaveHandoff";
 import { WorkWaveResult } from "./sections/WorkWaveResult";
-import { WorkWaveNextCase } from "./sections/WorkWaveNextCase";
 import { FinalCtaCase } from "@/widgets/final-cta";
 import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css/animate.min.css";
@@ -95,7 +94,7 @@ export function WorkWaveCase() {
         </AnimationOnScroll>
         
         <AnimationOnScroll
-          animateIn="animate__slideInUp"
+          animateIn="animate__slideInUp" 
           animateOnce
         >  
           <WorkWaveTask id="task"/>

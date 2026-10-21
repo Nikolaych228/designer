@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 export function MoreProjects () {
     return (
@@ -15,7 +15,7 @@ export function MoreProjects () {
             <div className="mt-6 grid grid-cols-2 gap-x-6">
                 <div className="border-[1px] rounded-4xl border-[#E6E6E6] p-3">
                     <Image
-                        src="/images/more-projects1.png"
+                        src={imgPath("/images/more-projects1.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={638}
                         height={358}
@@ -27,7 +27,7 @@ export function MoreProjects () {
                                 Сайт IT-лаборатории
                             </p>
                             <Image
-                                src="/icons/star.svg"
+                                src={imgPath("/icons/star.svg")} // 👈 ИСПРАВЛЕНО
                                 alt=""
                                 width={8}
                                 height={8}
@@ -37,17 +37,17 @@ export function MoreProjects () {
                             </p>
                         </div>
                         <p className="text-[24px] my-3 leading-[28px] text-gray-900 font-semibold">
-                            Cайт лаборатории для привлечения студентов
+                            Cайт лаборатории для привлечения студентов
                         </p>
                         <p className="text-[16px] text-gray-400">
-                            Спроектировала структуру и контент. Перед дизайном опросила участников лаборатории и использовала ответы в подаче проекта
+                            Спроектировала структуру и контент. Перед дизайном опросила участников лаборатории и использовала ответы в подаче проекта
                         </p>
                     </div>
                 </div>
                 
                 <div className="border-[1px] rounded-4xl border-[#E6E6E6] p-3">
                     <Image
-                        src="/images/more-projects3.png"
+                        src={imgPath("/images/more-projects3.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={638}
                         height={358}
@@ -59,7 +59,7 @@ export function MoreProjects () {
                                 Фирменный стиль
                             </p>
                             <Image
-                                src="/icons/star.svg"
+                                src={imgPath("/icons/star.svg")} // 👈 ИСПРАВЛЕНО
                                 alt=""
                                 width={8}
                                 height={8}
@@ -69,10 +69,10 @@ export function MoreProjects () {
                             </p>
                         </div>
                         <p className="text-[24px] my-3 leading-[28px] text-gray-900 font-semibold">
-                            Визуальная система после затянувшегося тупика
+                            Визуальная система после затянувшегося тупика
                         </p>
                         <p className="text-[16px] text-gray-400">
-                            Собрала новую визуальную концепцию и систему носителей. Направление утвердили примерно за месяц
+                            Собрала новую визуальную концепцию и систему носителей. Направление утвердили примерно за месяц
                         </p>
                     </div>
                 </div>

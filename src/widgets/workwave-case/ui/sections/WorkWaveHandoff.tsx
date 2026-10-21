@@ -1,6 +1,7 @@
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 import { WorkWaveHandoffVideo } from "./WorkWaveHandoffVideo";
 
@@ -100,7 +101,7 @@ export function WorkWaveHandoff({
 
           
             <WorkWaveHandoffVideo
-              src="/video/workwave-handoffVideo.mp4"
+              src={imgPath("/video/workwave-handoffVideo.mp4")} // 👈 ИСПРАВЛЕНО
               className="h-full w-full  mx-auto lg:mx-0"
             />
           

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -62,7 +63,7 @@ export function TentaFeedBack({
                 
                 
                     <Image
-                        src="/images/tenta/tenta-feedback.png"
+                        src={imgPath("/images/tenta/tenta-feedback.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={668}
                         height={0}

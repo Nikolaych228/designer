@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -39,7 +40,7 @@ export function WorkWaveStates({
             <div className="flex flex-col gap-5">
                 <div className="p-3 border-[1px] border-[#E6E6E6] rounded-[32px]">
                     <Image
-                        src="/images/workwave/workwave-states1.png"
+                        src={imgPath("/images/workwave/workwave-states1.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={640}
                         height={0}
@@ -56,7 +57,7 @@ export function WorkWaveStates({
                 </div>
                 <div className="p-3 border-[1px] border-[#E6E6E6] rounded-[32px]">
                     <Image
-                        src="/images/workwave/workwave-states2.png"
+                        src={imgPath("/images/workwave/workwave-states2.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={640}
                         height={0}
@@ -75,7 +76,7 @@ export function WorkWaveStates({
             <div className="flex flex-col gap-5">
                 <div className="p-3 border-[1px] border-[#E6E6E6] rounded-[32px]">
                     <Image
-                        src="/images/workwave/workwave-states3.png"
+                        src={imgPath("/images/workwave/workwave-states3.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={640}
                         height={0}
@@ -92,7 +93,7 @@ export function WorkWaveStates({
                 </div>
                 <div className="p-3 border-[1px] border-[#E6E6E6] rounded-[32px]">
                     <Image
-                        src="/images/workwave/workwave-states4.png"
+                        src={imgPath("/images/workwave/workwave-states4.png")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={640}
                         height={0}

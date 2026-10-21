@@ -3,6 +3,7 @@
 import Aurora from "@/components/ui/mesh-gradient-background";
 import { Button, ButtonWhite } from "@/shared/ui/button";
 import Image from "next/image";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 export function MobileStub() {
   return (
@@ -24,7 +25,7 @@ export function MobileStub() {
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 w-full">
         <div className="mb-6">
            <Image 
-                src="/images/mobile/mobile.png" 
+                src={imgPath("/images/mobile/mobile.png")} // 👈 ИСПРАВЛЕНО
                 alt="Better on desktop"
                 width={280}
                 height={186}
@@ -48,7 +49,11 @@ export function MobileStub() {
         <Button target="_blank" href="https://web.telegram.org/k/#@lzuxui" arrow="right">
             Написать в Telegram
         </Button>
-        <ButtonWhite target="_blank" href="/pdf/Rezyume.pdf" arrowPrime="right">
+        <ButtonWhite 
+            target="_blank" 
+            href={imgPath("/pdf/Rezyume.pdf")} // 👈 ИСПРАВЛЕНО
+            arrowPrime="right"
+        >
             Открыть CV
         </ButtonWhite>
       </div>

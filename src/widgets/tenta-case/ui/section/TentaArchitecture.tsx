@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 // Компонент картинки с эффектом лупы
 function MagnifierImage({ src, alt }: { src: string; alt: string }) {
@@ -12,6 +13,9 @@ function MagnifierImage({ src, alt }: { src: string; alt: string }) {
     width: 0,
     height: 0,
   });
+
+  // 👇 ИСПРАВЛЕНО: получаем правильный путь один раз
+  const imageSrc = imgPath(src);
 
   const ZOOM = 2.0; // Коэффициент увеличения
   const LENS_SIZE = 300; // Размер круга лупы в пикселях
@@ -31,7 +35,7 @@ function MagnifierImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="relative w-full overflow-hidden rounded-3xl border border-gray-100 bg-white">
       <Image
-        src={src}
+        src={imageSrc} // 👈 ИСПРАВЛЕНО
         alt={alt}
         width={1920}
         height={1080}
@@ -54,7 +58,7 @@ function MagnifierImage({ src, alt }: { src: string; alt: string }) {
             width: `${LENS_SIZE}px`,
             top: `${position.y - LENS_SIZE / 2}px`,
             left: `${position.x - LENS_SIZE / 2}px`,
-            backgroundImage: `url(${src})`,
+            backgroundImage: `url(${imageSrc})`, // 👈 ИСПРАВЛЕНО
             backgroundRepeat: "no-repeat",
             backgroundSize: `${position.width * ZOOM}px ${position.height * ZOOM}px`,
             backgroundPosition: `${position.bgX}px ${position.bgY}px`,

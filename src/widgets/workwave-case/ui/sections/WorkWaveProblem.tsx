@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -60,7 +61,7 @@ export function WorkWaveProblem({
                             </p>
                         </div>
                         <Image
-                            src="/icons/arrow-right.svg"
+                            src={imgPath("/icons/arrow-right.svg")} // 👈 ИСПРАВЛЕНО
                             alt=""
                             width={24}
                             height={24}
@@ -72,7 +73,7 @@ export function WorkWaveProblem({
                             </p>
                         </div>
                         <Image
-                            src="/icons/arrow-right.svg"
+                            src={imgPath("/icons/arrow-right.svg")} // 👈 ИСПРАВЛЕНО
                             alt=""
                             width={24}
                             height={24}
@@ -84,7 +85,7 @@ export function WorkWaveProblem({
                             </p>
                         </div>
                         <Image
-                            src="/icons/arrow-right.svg"
+                            src={imgPath("/icons/arrow-right.svg")} // 👈 ИСПРАВЛЕНО
                             alt=""
                             width={24}
                             height={24}

@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -38,7 +39,7 @@ export function TentaOutsideInterface({
         <div className="grid md:grid-cols-2 mt-8 [@media(min-height:850px)]:lg:mt-10 gap-4 lg:gap-x-10 px-3 lg:px-0">
             <div className="p-3 border-[1px] border-[#E6E6E6] rounded-[32px] flex flex-col justify-between">
                 <Image
-                    src="/images/tenta/tenta-outsideInterface1.png"
+                    src={imgPath("/images/tenta/tenta-outsideInterface1.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     width={640}
                     height={0}
@@ -56,7 +57,7 @@ export function TentaOutsideInterface({
             
             <div className="p-3 border-[1px] border-[#E6E6E6] rounded-[32px] flex flex-col justify-between">
                 <Image
-                    src="/images/tenta/tenta-outsideInterface2.png"
+                    src={imgPath("/images/tenta/tenta-outsideInterface2.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     width={640}
                     height={0}
@@ -75,7 +76,7 @@ export function TentaOutsideInterface({
             
         <div className="p-3 mt-6 [@media(min-height:850px)]:lg:mt-10 border-[1px] border-[#E6E6E6] rounded-[32px] mx-3 lg:mx-0">
             <Image
-                src="/images/tenta/tenta-outsideInterface3.png"
+                src={imgPath("/images/tenta/tenta-outsideInterface3.png")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={1330}
                 height={0}

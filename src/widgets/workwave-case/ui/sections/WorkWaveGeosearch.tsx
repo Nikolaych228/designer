@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -42,7 +43,7 @@ export function WorkWaveGeosearch({
                 </p>
             </div>
             <Image
-                src="/icons/arrow-right.svg"
+                src={imgPath("/icons/arrow-right.svg")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={24}
                 height={24}
@@ -54,7 +55,7 @@ export function WorkWaveGeosearch({
                 </p>
             </div>
             <Image
-                src="/icons/arrow-right.svg"
+                src={imgPath("/icons/arrow-right.svg")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={24}
                 height={24}
@@ -66,7 +67,7 @@ export function WorkWaveGeosearch({
                 </p>
             </div>
             <Image
-                src="/icons/arrow-right.svg"
+                src={imgPath("/icons/arrow-right.svg")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={24}
                 height={24}
@@ -81,7 +82,7 @@ export function WorkWaveGeosearch({
       </div>
       
       <Image
-        src="/images/workwave/workwave-geosearch1.png"
+        src={imgPath("/images/workwave/workwave-geosearch1.png")} // 👈 ИСПРАВЛЕНО
         width={1920}
         height={800}
         alt=""

@@ -2,6 +2,7 @@ import { WorkWaveHandoffVideo } from "@/widgets/workwave-case/ui/sections/WorkWa
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveHandoffProps =
   ComponentPropsWithoutRef<"section">;
@@ -17,7 +18,11 @@ export function TentaUnpleasant({
       className={className}
       {...props}
     >
-    <div className="relative bg-[url('/icons/tenta-unpleasant.svg')] bg-center bg-no-repeat bg-[length:100%_auto] w-full">
+    {/* 👈 Убрали bg-[url(...)] из классов и перенесли в style */}
+    <div 
+      className="relative bg-center bg-no-repeat bg-[length:100%_auto] w-full"
+      style={{ backgroundImage: `url(${imgPath("/icons/tenta-unpleasant.svg")})` }}
+    >
       <div className="py-[100px] lg:pl-[300px] lg:pr-[100px] [@media(min-height:850px)]:lg:pl-[404px] [@media(min-height:850px)]:lg:pr-[250px]">
         <div className="flex flex-col lg:flex-row justify-between gap-y-10 lg:gap-y-0 lg:gap-x-10">
           {/* LEFT */}
@@ -55,7 +60,7 @@ export function TentaUnpleasant({
               }}
             >
                 <WorkWaveHandoffVideo
-                    src="/video/tenta-robot3.mp4"
+                    src={imgPath("/video/tenta-robot3.mp4")} // 👈 ИСПРАВЛЕНО
                     className="rounded-[58px] w-full"
                 />
             </div>

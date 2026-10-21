@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 export function TentaHero() {
     return (
         <section>
             <Image
-                src="/images/tenta/tenta-hero1.png"
+                src={imgPath("/images/tenta/tenta-hero1.png")} // 👈 ИСПРАВЛЕНО
                 alt=""
                 width={1920}
                 height={840}
@@ -16,7 +17,7 @@ export function TentaHero() {
                         B2B
                     </p>
                     <Image
-                        src="/icons/starPrimary.svg"
+                        src={imgPath("/icons/starPrimary.svg")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={8}
                         height={8}
@@ -26,7 +27,7 @@ export function TentaHero() {
                         Legacy redesign
                     </p>
                     <Image
-                        src="/icons/starPrimary.svg"
+                        src={imgPath("/icons/starPrimary.svg")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={8}
                         height={8}
@@ -36,7 +37,7 @@ export function TentaHero() {
                         Mobile
                     </p>
                     <Image
-                        src="/icons/starPrimary.svg"
+                        src={imgPath("/icons/starPrimary.svg")} // 👈 ИСПРАВЛЕНО
                         alt=""
                         width={8}
                         height={8}
@@ -84,7 +85,7 @@ export function TentaHero() {
                 </div>
                 
                 <Image
-                    src="/images/tenta/tenta-hero2.png"
+                    src={imgPath("/images/tenta/tenta-hero2.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     width={1356}
                     height={0}

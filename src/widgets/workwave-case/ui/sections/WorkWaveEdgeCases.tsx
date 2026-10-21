@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import type { ComponentPropsWithoutRef } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveEdgeCasesProps =
   ComponentPropsWithoutRef<"section">;
@@ -158,7 +159,7 @@ export function WorkEdgeCases({
           >
             <Image
               key={activeCase.image}
-              src={activeCase.image}
+              src={imgPath(activeCase.image)} // 👈 ИСПРАВЛЕНО
               alt={activeCase.title}
               fill
               sizes="(max-width: 1440px) 55vw, 800px"
@@ -169,7 +170,7 @@ export function WorkEdgeCases({
       </div>
       
       <Image
-        src="/images/workwave/workwave-edgeCasesBg.png"
+        src={imgPath("/images/workwave/workwave-edgeCasesBg.png")} // 👈 ИСПРАВЛЕНО
         alt=""
         width={1920}
         height={0}

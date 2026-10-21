@@ -2,6 +2,7 @@ import Image from "next/image";
 import type {
   ComponentPropsWithoutRef,
 } from "react";
+import { imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type WorkWaveAboutProps =
   ComponentPropsWithoutRef<"section">;
@@ -37,7 +38,7 @@ export function TentaDecision({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-x-5 mt-8 [@media(min-height:850px)]:lg:mt-5 px-3 lg:px-0">
             <div>
                 <Image
-                    src="/images/tenta/tenta-decision1.png"
+                    src={imgPath("/images/tenta/tenta-decision1.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     height={700}
                     width={440}
@@ -51,7 +52,7 @@ export function TentaDecision({
             </div>
             <div>
                 <Image
-                    src="/images/tenta/tenta-decision2.png"
+                    src={imgPath("/images/tenta/tenta-decision2.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     height={700}
                     width={440}
@@ -65,7 +66,7 @@ export function TentaDecision({
             </div>
             <div>
                 <Image
-                    src="/images/tenta/tenta-decision3.png"
+                    src={imgPath("/images/tenta/tenta-decision3.png")} // 👈 ИСПРАВЛЕНО
                     alt=""
                     height={700}
                     width={440}
