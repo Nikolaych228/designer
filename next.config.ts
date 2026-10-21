@@ -1,17 +1,19 @@
 import type { NextConfig } from "next";
 
-// Умная настройка: префикс только для продакшена (GitHub)
 const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? '/designer' : '';
 
 const nextConfig: NextConfig = {
   output: 'export',
-  
-  // ВАЖНО: здесь должно быть имя вашего репозитория (designer)
-  basePath: isProd ? '/designer' : '',
+  basePath: basePath,
   assetPrefix: isProd ? '/designer/' : '',
-  
   images: {
     unoptimized: true,
+  },
+  // 👇 ДОБАВЛЯЕМ ЭТУ СТРОКУ
+  trailingSlash: true, 
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 
