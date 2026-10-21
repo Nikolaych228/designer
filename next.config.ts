@@ -6,7 +6,7 @@ const basePath = isProd ? '/designer' : '';
 const nextConfig: NextConfig = {
   output: 'export',
   basePath: basePath,
-  assetPrefix: isProd ? '/designer/' : '',
+  assetPrefix: isProd ? '/designer' : '',
   images: {
     unoptimized: true,
   },

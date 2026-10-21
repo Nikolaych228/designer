@@ -28,7 +28,7 @@ export function ProjectNavigation({
 }: ProjectNavigationProps) {
   return (
     <Button
-      href={`/projects/${slug}`}
+      href={`/designer/projects/${slug}`}
       arrow={arrow}
       className={className}
     >
