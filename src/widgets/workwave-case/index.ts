@@ -11,6 +11,5 @@ export { WorkWaveStates } from "./ui/sections/WorkWaveStates"
 export { WorkEdgeCases } from "./ui/sections/WorkWaveEdgeCases"
 export { WorkWaveHandoff } from "./ui/sections/WorkWaveHandoff"
 export { WorkWaveResult } from "./ui/sections/WorkWaveResult"
-export { WorkWaveNextCase } from "./ui/sections/WorkWaveNextCase"
 
 

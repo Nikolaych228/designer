@@ -11,7 +11,6 @@ export { TentaDecision } from "./ui/section/TentaDecision"
 export { TentaTerminal } from "./ui/section/TentaTerminal"
 export { TentaResult } from "./ui/section/TentaResult"
 export { TentaOutsideInterface } from "./ui/section/TentaOutsideInterface"
-export { TentaNextCase } from "./ui/section/TentaNextCase"
 export { TentaUnpleasant } from "./ui/section/TentaUnpleasant"
 
 
