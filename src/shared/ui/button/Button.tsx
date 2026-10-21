@@ -6,7 +6,7 @@ import type {
   ReactNode,
 } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn, imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type ArrowPosition = "left" | "right" | "both";
 
@@ -88,7 +88,7 @@ export function Button({
     <>
       {(arrow === "left" || arrow === "both") && (
         <Image
-          src="/icons/arrow-left.svg"
+          src={imgPath("/icons/arrow-left.svg")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={24}
           height={24}
@@ -100,7 +100,7 @@ export function Button({
 
       {(arrow === "right" || arrow === "both") && (
         <Image
-          src="/icons/arrow-tr.svg"
+          src={imgPath("/icons/arrow-tr.svg")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={24}
           height={24}

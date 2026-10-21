@@ -59,13 +59,16 @@ export function WorkWaveHero () {
                             6 месяцев
                         </p>
                     </div>
-                    <div className="p-8 bg-[#EDEFFE] rounded-3xl">
-                        <p className="[@media(min-height:850px)]:lg:text-[24px] text-[20px] font-semibold leading-[28px] text-[#212967]">
-                            MVP вышел в RuStore
-                        </p>
-                        <p className="mt-4 [@media(min-height:850px)]:lg:text-[16px] text-[14px] leading-[24px] text-gray-500">
-                            сделать кнопку
-                        </p>
+                    <div className="flex items-center cursor-pointer mr-1">
+                        <a target="_blank" href="https://www.rustore.ru/catalog/app/com.workwave" className="text-[14px] [@media(min-height:850px)]:lg:text-[16px] leading-[20px] [@media(min-height:850px)]:lg:leading-[24px] text-[#4E61F6] ">
+                            Перейти
+                        </a>
+                        <Image
+                            src={imgPath("/icons/arrowPrime.svg")} // 👈 ИСПРАВЛЕНО
+                            alt=""
+                            width={16}
+                            height={16}
+                        />
                     </div>
                 </div>
             </div>

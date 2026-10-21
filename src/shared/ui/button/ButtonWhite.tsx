@@ -6,7 +6,7 @@ import type {
   ReactNode,
 } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn, imgPath } from "@/lib/utils"; // 👈 Добавили импорт утилиты
 
 type ArrowPosition = "left" | "right" | "both";
 
@@ -88,7 +88,7 @@ export function ButtonWhite({
     <>
       {(arrowPrime === "left" || arrowPrime === "both") && (
         <Image
-          src="/icons/arrowPrime.svg" 
+          src={imgPath("/icons/arrowPrime.svg")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={24}
           height={24}
@@ -98,7 +98,7 @@ export function ButtonWhite({
       
       {(arrowBlack === "left" || arrowBlack === "both") && (
         <Image
-          src="/icons/arrowBlack.svg" 
+          src={imgPath("/icons/arrowBlack.svg")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={24}
           height={24}
@@ -110,7 +110,7 @@ export function ButtonWhite({
 
       {(arrowPrime === "right" || arrowPrime === "both") && (
         <Image
-          src="/icons/arrowPrime.svg" 
+          src={imgPath("/icons/arrowPrime.svg")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={24}
           height={24}
@@ -119,7 +119,7 @@ export function ButtonWhite({
       )}
       {(arrowBlack === "right" || arrowBlack === "both") && (
         <Image
-          src="/icons/arrowBlack.svg"
+          src={imgPath("/icons/arrowBlack.svg")} // 👈 ИСПРАВЛЕНО
           alt=""
           width={24}
           height={24}
