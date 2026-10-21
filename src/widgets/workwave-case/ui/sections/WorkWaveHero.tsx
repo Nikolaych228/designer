@@ -59,16 +59,21 @@ export function WorkWaveHero () {
                             6 месяцев
                         </p>
                     </div>
-                    <div className="flex items-center cursor-pointer mr-1">
-                        <a target="_blank" href="https://www.rustore.ru/catalog/app/com.workwave" className="text-[14px] [@media(min-height:850px)]:lg:text-[16px] leading-[20px] [@media(min-height:850px)]:lg:leading-[24px] text-[#4E61F6] ">
-                            Перейти
-                        </a>
-                        <Image
-                            src={imgPath("/icons/arrowPrime.svg")} // 👈 ИСПРАВЛЕНО
-                            alt=""
-                            width={16}
-                            height={16}
-                        />
+                    <div className="p-4 [@media(min-height:850px)]:lg:p-8 bg-[#fff] rounded-3xl border border-gray-100 lg:border-transparent flex flex-col justify-between">
+                        <p className="text-[18px] [@media(min-height:850px)]:lg:text-[24px] text-[#212967] leading-[24px] [@media(min-height:850px)]:lg:leading-[28px] font-semibold">
+                            MVP вышел в RuStore
+                        </p>
+                        <div className="flex items-center cursor-pointer mr-1">
+                            <a target="_blank" href="https://www.rustore.ru/catalog/app/com.workwave" className="text-[14px] [@media(min-height:850px)]:lg:text-[16px] leading-[20px] [@media(min-height:850px)]:lg:leading-[24px] text-[#4E61F6] ">
+                                Перейти
+                            </a>
+                            <Image
+                                src={imgPath("/icons/arrowPrime.svg")} // 👈 ИСПРАВЛЕНО
+                                alt=""
+                                width={16}
+                                height={16}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

@@ -59,7 +59,7 @@ export function Hero() {
           </Button>
           <ButtonWhite 
             target="_blank" 
-            href={imgPath("/pdf/Rezyume.pdf")} // 👈 ИСПРАВЛЕНО (добавили imgPath)
+            href="/pdf/Rezyume.pdf" 
             arrowPrime="right"
           >
               Открыть CV
