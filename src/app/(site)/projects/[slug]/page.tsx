@@ -21,6 +21,20 @@ interface ProjectPageProps {
   }>;
 }
 
+// 1. ДОБАВЛЯЕМ ЭТУ ФУНКЦИЮ
+// Она говорит Next.js: "При сборке сгенерируй страницы только для этих слагов"
+export async function generateStaticParams() {
+  return [
+    { slug: "workwave" },
+    { slug: "tenta" },
+  ];
+}
+
+// 2. ДОБАВЛЯЕМ ЭТУ КОНСТАНТУ (рекомендуется)
+// Если пользователь введет несуществующий slug, Next.js сразу отдаст 404, 
+// а не будет пытаться сгенерировать страницу "на лету" (что запрещено при статическом экспорте)
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
@@ -56,11 +70,11 @@ export default async function ProjectPage({
     case "workwave":
       return <WorkWaveCase />;
 
-      case "tenta":
-        return <TentaCase/>;
+    case "tenta":
+      return <TentaCase />;
+
     /*
     Потом просто добавим:
-
 
     case "excursions":
       return <ExcursionsCase />;
